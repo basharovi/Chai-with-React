@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
 
-        <HeyChai />
+        <HeyChai initValue={2} />
       </header>
     </div>
   );

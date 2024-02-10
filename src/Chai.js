@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-function HeyChai() {
-  const [counter, setCounter] = useState(0);
+function HeyChai({ initValue = 0 }) {
+  const [counter, setCounter] = useState(initValue);
 
   const Increase = () => {
     if (counter < 20) setCounter(counter + 1);
@@ -15,7 +15,9 @@ function HeyChai() {
     <>
       <h4 className="App-logo"> {counter} </h4>
       <div style={{ display: "inline-flex", gap: "5px" }}>
-        <button onClick={Increase}> Increase </button>
+        <button className="bg-blue-600 px-2 text-black" onClick={Increase}>
+          Increase
+        </button>
         <button onClick={Decrease}> Decrease </button>
       </div>
     </>
